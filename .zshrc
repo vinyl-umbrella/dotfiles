@@ -16,6 +16,7 @@ setopt HIST_IGNORE_DUPS
 # かっこ自動補完
 setopt auto_param_keys
 
+setopt extended_history
 
 # エイリアス
 alias ls='ls --color -F'
@@ -24,6 +25,7 @@ alias la='ls -A'
 alias ll='ls -gh'
 alias lla='ll -A'
 alias em='emacs'
+alias history='history -t "%F %T"'
 alias grep='grep --color=auto'
 alias pip3='python3 -m pip'
 
