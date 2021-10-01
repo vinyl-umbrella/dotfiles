@@ -1,0 +1,98 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "extensions.ignoreRecommendations": false,
+    "editor.wordWrap": "on",
+    "editor.foldingHighlight": false,
+    "editor.roundedSelection": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.cursorBlinking": "phase",
+    "editor.minimap.enabled": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.largeFileOptimizations": false,
+    "editor.renderLineHighlight": "gutter",
+    "explorer.confirmDragAndDrop": false,
+    "files.insertFinalNewline": true,
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.tree.indent": 16,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "minimalistic-icons",
+    "workbench.colorTheme": "Monokai",
+    "editor.fontFamily": "Ricty Diminished",
+    "editor.renderWhitespace": "boundary",
+    "editor.fontSize": 15,
+    "window.zoomLevel": 1,
+    "workbench.colorCustomizations": {
+        "editor.background": "#2c2c2c",
+        "activityBar.background": "#353535",
+        "activityBar.foreground":"#ffffff",
+        "activityBar.border": "#2c2c2c",
+        "activityBarBadge.background": "#c0c0c0",
+        "activityBarBadge.foreground": "#000000",
+        "sideBar.background": "#303030",
+        "statusBar.background": "#202020",
+        "statusBar.noFolderBackground": "#202020",
+        "tab.inactiveBackground": "#1f1f1f",
+        "tab.inactiveForeground": "#8d8d8d",
+        "editorGutter.background": "#181818",
+        "statusBarItem.remoteBackground": "#3e778d",
+    },
+    "latex-workshop.latex.tools":[
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+        },
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.nav", "*.dvi", "*.synctex.gz"
+    ],
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.outDir": "out",
+
+    "vsnotes.defaultNoteName": "Note",
+    "vsnotes.defaultNoteTitle": "{dt}.{ext}",
+
+    "python.languageServer": "Pylance",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E501"
+    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "[go]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "go.formatTool": "goformat",
+    "remote.SSH.remotePlatform": {
+        "raspi": "linux",
+        "ec2": "linux",
+        "oraclevm": "linux"
+    },
+}
