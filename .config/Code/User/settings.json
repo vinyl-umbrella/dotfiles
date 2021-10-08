@@ -22,6 +22,7 @@
     "editor.fontFamily": "Ricty Diminished",
     "editor.renderWhitespace": "boundary",
     "editor.fontSize": 15,
+    "editor.guides.bracketPairs": true,
     "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "editor.background": "#2c2c2c",
