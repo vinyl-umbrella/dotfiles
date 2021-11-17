@@ -17,8 +17,9 @@
     "workbench.editor.decorations.badges": true,
     "workbench.tree.indent": 16,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "minimalistic-icons",
     "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.saturation": 0.2,
     "editor.fontFamily": "Ricty Diminished",
     "editor.renderWhitespace": "boundary",
     "editor.fontSize": 15,
@@ -27,7 +28,7 @@
     "workbench.colorCustomizations": {
         "editor.background": "#2c2c2c",
         "activityBar.background": "#353535",
-        "activityBar.foreground":"#ffffff",
+        "activityBar.foreground": "#ffffff",
         "activityBar.border": "#2c2c2c",
         "activityBarBadge.background": "#c0c0c0",
         "activityBarBadge.foreground": "#000000",
@@ -39,7 +40,7 @@
         "editorGutter.background": "#181818",
         "statusBarItem.remoteBackground": "#3e778d",
     },
-    "latex-workshop.latex.tools":[
+    "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
             "command": "latexmk",
@@ -63,10 +64,8 @@
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.outDir": "out",
-
     "vsnotes.defaultNoteName": "Note",
     "vsnotes.defaultNoteTitle": "{dt}.{ext}",
-
     "python.languageServer": "Pylance",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
@@ -96,4 +95,15 @@
         "ec2": "linux",
         "oraclevm": "linux"
     },
+    "[typescriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+        "breadcrumbs.showArrays": true,
+        "editor.tabSize": 2
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
 }
