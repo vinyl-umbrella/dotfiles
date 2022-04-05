@@ -17,6 +17,7 @@
     "workbench.editor.decorations.badges": true,
     "workbench.tree.indent": 16,
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.layoutControl.enabled": false,
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.saturation": 0.2,
