@@ -1,25 +1,20 @@
-# プロンプト
+# ----- prompt -----
 PROMPT="%F{cyan}[%(5~,%-1~/.../%2~,%~)]%f$ "
 RPROMPT="%F{white} %D{%H:%M:%S}%f"
 
 autoload -Uz colors; colors
 
-# 補完
+# ----- completion -----
 autoload -Uz compinit; compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
-# 聞き直す
 setopt correct
-# 重複追加しない
 setopt HIST_IGNORE_DUPS
-# かっこ自動補完
 setopt auto_param_keys
 
-setopt extended_history
-
-# エイリアス
-alias ls='ls --color -F'
+# ----- alias -----
+alias ls='ls --color -F --time-style=long-iso --group-directories-first'
 alias sl='ls'
 alias la='ls -A'
 alias ll='ls -gh'
@@ -29,10 +24,14 @@ alias history='history -t "%F %T"'
 alias grep='grep --color=auto'
 alias pip3='python3 -m pip'
 
+# ----- history -----
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
-export SAVEHIST=1000
+export SAVEHIST=10000
 setopt hist_ignore_dups
+setopt extended_history
+setopt share_history
+setopt inc_append_history
 
 export PATH=$HOME/.local/bin:$PATH
 
@@ -51,6 +50,3 @@ autoload -Uz _zinit
 ### End of Zinit's installer chunk
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-
-
-# /usr/bin/neofetch 
