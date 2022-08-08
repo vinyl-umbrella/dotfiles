@@ -3,12 +3,21 @@ autoload -Uz colors
 autoload -Uz vcs_info
 setopt prompt_subst
 
-zstyle ':vcs_info:git:*' formats '%b'
+
+zstyle ':vcs_info:git:*' formats '[%b]'
 precmd () {
+    local EXIT_CODE=$?
+    PROMPT="%F{cyan}[%(5~,%-1~/.../%2~,%~)]@wsl%f"
+
+    if [[ $EXIT_CODE -eq 0 ]]; then
+        PROMPT+="%F{white}$ %f"
+    else
+        PROMPT+="%F{red}$ %f"
+    fi
     vcs_info
-    RPROMPT="%F{white} %D{%H:%M:%S}%f[${vcs_info_msg_0_}]"
+    RPROMPT="%F{white} %D{%H:%M:%S}%f${vcs_info_msg_0_}"
 }
-PROMPT="%F{cyan}[%(5~,%-1~/.../%2~,%~)]@wsl%f$ "
+
 
 # ----- completion -----
 autoload -Uz compinit; compinit
