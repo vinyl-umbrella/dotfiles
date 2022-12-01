@@ -3,7 +3,6 @@ autoload -Uz colors
 autoload -Uz vcs_info
 setopt prompt_subst
 
-
 zstyle ':vcs_info:git:*' formats '[%b]'
 precmd () {
     local EXIT_CODE=$?
@@ -23,6 +22,10 @@ precmd () {
 autoload -Uz compinit; compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' list-colors `dircolors`
 # pip zsh completion start
 function _pip_completion {
   local words cword
@@ -43,9 +46,10 @@ setopt auto_param_keys
 alias ls='ls --color -F --time-style=long-iso --group-directories-first'
 alias sl='ls'
 alias la='ls -A'
-alias ll='ls -gh'
+alias ll='ls -lh'
 alias lla='ll -A'
-alias em='emacs'
+alias em='emacs -nw'
+alias bat='batcat'
 alias history='history -t "%F %T"'
 alias grep='grep --color=auto'
 #alias pip3='python3 -m pip'
@@ -58,7 +62,7 @@ function gitzip() {
 # ----- history -----
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
-export SAVEHIST=10000
+export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt extended_history
 setopt share_history
