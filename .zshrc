@@ -1,22 +1,11 @@
-# ----- prompt -----
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 autoload -Uz colors
-autoload -Uz vcs_info
-setopt prompt_subst
-
-zstyle ':vcs_info:git:*' formats '[%b]'
-precmd () {
-    local EXIT_CODE=$?
-    PROMPT="%F{cyan}[%(5~,%-1~/.../%2~,%~)]@wsl%f"
-
-    if [[ $EXIT_CODE -eq 0 ]]; then
-        PROMPT+="%F{white}$ %f"
-    else
-        PROMPT+="%F{red}$ %f"
-    fi
-    vcs_info
-    RPROMPT="%F{white} %D{%H:%M:%S}%f${vcs_info_msg_0_}"
-}
-
 
 # ----- completion -----
 autoload -Uz compinit; compinit
@@ -52,7 +41,7 @@ alias em='emacs -nw'
 alias bat='batcat'
 alias history='history -t "%F %T"'
 alias grep='grep --color=auto'
-#alias pip3='python3 -m pip'
+
 function gitzip() {
     dir_name=`basename \`git rev-parse --show-toplevel\``
     echo $dir_name
@@ -86,3 +75,7 @@ autoload -Uz _zinit
 ### End of Zinit's installer chunk
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+zinit light romkatv/powerlevel10k
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
