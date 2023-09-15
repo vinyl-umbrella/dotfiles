@@ -1,100 +1,55 @@
 {
     "files.trimTrailingWhitespace": true,
-    "extensions.ignoreRecommendations": false,
+    "files.insertFinalNewline": true,
     "editor.wordWrap": "on",
     "editor.foldingHighlight": false,
     "editor.roundedSelection": false,
     "editor.tabCompletion": "onlySnippets",
+    "editor.fontFamily": "HackGen, Consolas, 'Courier New', monospace",
     "editor.bracketPairColorization.enabled": true,
+    "editor.formatOnSave": true,
     "editor.cursorBlinking": "phase",
     "editor.minimap.enabled": false,
+    "editor.inlineSuggest.enabled": true,
     "editor.copyWithSyntaxHighlighting": false,
     "editor.largeFileOptimizations": false,
     "editor.renderLineHighlight": "gutter",
+    "editor.renderWhitespace": "boundary",
+    "editor.fontSize": 17,
+    "editor.guides.bracketPairs": true,
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "off",
+        "strings": "on"
+    },
     "explorer.confirmDragAndDrop": false,
-    "files.insertFinalNewline": true,
+    "extensions.ignoreRecommendations": false,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
     "workbench.tree.indent": 16,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.layoutControl.enabled": false,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.saturation": 0.2,
-    "editor.fontFamily": "Ricty Diminished",
-    "editor.renderWhitespace": "boundary",
-    "editor.fontSize": 15,
-    "editor.guides.bracketPairs": true,
-    "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
-        "editor.background": "#2c2c2c",
-        "activityBar.background": "#353535",
-        "activityBar.foreground": "#ffffff",
-        "activityBar.border": "#2c2c2c",
-        "activityBarBadge.background": "#c0c0c0",
-        "activityBarBadge.foreground": "#000000",
-        "sideBar.background": "#303030",
-        "statusBar.background": "#202020",
-        "statusBar.noFolderBackground": "#202020",
-        "tab.inactiveBackground": "#1f1f1f",
-        "tab.inactiveForeground": "#8d8d8d",
-        "editorGutter.background": "#181818",
-        "statusBarItem.remoteBackground": "#3e778d",
+        "statusBarItem.remoteBackground": "#386b80",
+        "statusBarItem.remoteForeground": "#ddd",
+        "statusBar.foreground": "#ddd",
+        "activityBarBadge.foreground": "#3e778d",
+        "activityBarBadge.background": "#ddd",
     },
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-        },
-    ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk",
-            "tools": [
-                "latexmk"
-            ]
-        },
-    ],
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.nav", "*.dvi", "*.synctex.gz"
-    ],
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.outDir": "out",
-    "vsnotes.defaultNoteName": "Note",
-    "vsnotes.defaultNoteTitle": "{dt}.{ext}",
-    "python.languageServer": "Pylance",
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--ignore=E501"
-    ],
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "python.defaultInterpreterPath": "/usr/bin/python3",
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "[go]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 4,
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.suggest.snippetsPreventQuickSuggestions": false
-    },
-    "go.formatTool": "goformat",
-    "remote.SSH.remotePlatform": {
-        "raspi": "linux",
-        "ec2": "linux",
-        "oraclevm": "linux"
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnType": true,
     },
     "[typescriptreact]": {
         "editor.tabSize": 2
@@ -107,4 +62,12 @@
         "editor.tabSize": 2
     },
     "diffEditor.ignoreTrimWhitespace": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.scrollback": 10000,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+    },
 }
