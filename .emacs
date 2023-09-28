@@ -69,9 +69,8 @@
 (setq scroll-conservatively 1)
 
 ;; line num
-(global-linum-mode t)
-(setq linum-format "%4d ")
-(set-face-background 'linum  "gray24")
+(global-display-line-numbers-mode 1)
+(setq-default display-line-numbers-width 4)
 
 ;; bar
 (tool-bar-mode 0)
