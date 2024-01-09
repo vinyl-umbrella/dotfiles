@@ -8,13 +8,17 @@ fi
 autoload -Uz colors
 
 # ----- completion -----
-autoload -Uz compinit; compinit
+autoload -Uz compinit; compinit -C
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' list-colors `dircolors`
+
+autoload bashcompinit && bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
+
 # pip zsh completion start
 function _pip_completion {
   local words cword
