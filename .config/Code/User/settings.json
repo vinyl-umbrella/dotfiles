@@ -16,6 +16,7 @@
     "editor.renderLineHighlight": "gutter",
     "editor.renderWhitespace": "boundary",
     "editor.fontSize": 17,
+    "editor.stickyScroll.enabled": true,
     "editor.guides.bracketPairs": true,
     "editor.quickSuggestions": {
         "other": "on",
@@ -23,6 +24,9 @@
         "strings": "on"
     },
     "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.density.editorTabHeight": "compact",
     "extensions.ignoreRecommendations": false,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
@@ -61,7 +65,6 @@
         "breadcrumbs.showArrays": true,
         "editor.tabSize": 2
     },
-    "diffEditor.ignoreTrimWhitespace": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "terminal.integrated.scrollback": 10000,
