@@ -1,0 +1,7 @@
+# https://github.com/sharkdp/bat#configuration-file
+
+# theme
+--theme="Monokai Extended"
+
+# disable pager
+--paging="never"
