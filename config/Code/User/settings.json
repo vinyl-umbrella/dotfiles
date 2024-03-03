@@ -18,6 +18,10 @@
     "editor.fontSize": 17,
     "editor.stickyScroll.enabled": true,
     "editor.guides.bracketPairs": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.quickSuggestions": {
         "other": "on",
         "comments": "off",
@@ -26,8 +30,12 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.compactFolders": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "window.density.editorTabHeight": "compact",
     "extensions.ignoreRecommendations": false,
+    "material-icon-theme.saturation": 0.2,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.scrollback": 10000,
+    "window.density.editorTabHeight": "compact",
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
     "workbench.tree.indent": 16,
@@ -35,7 +43,6 @@
     "workbench.layoutControl.enabled": false,
     "workbench.colorTheme": "GitHub Dark Dimmed",
     "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.saturation": 0.2,
     "workbench.colorCustomizations": {
         "statusBarItem.remoteBackground": "#386b80",
         "statusBarItem.remoteForeground": "#ddd",
@@ -51,26 +58,36 @@
         "jupyter-notebook": "left"
     },
     "python.languageServer": "Pylance",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true,
+        "editor.formatOnPaste": true,
     },
-    "[typescriptreact]": {
+    "black-formatter.args": [
+        "--line-length",
+        "100"
+    ],
+    "[vue]": {
         "editor.tabSize": 2
     },
-    "[vue]": {
+    "[typescriptreact]": {
         "editor.tabSize": 2
     },
     "[javascriptreact]": {
         "breadcrumbs.showArrays": true,
         "editor.tabSize": 2
     },
+    "[go]": {
+        "editor.formatOnPaste": true
+    },
+    "go.useLanguageServer": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.scrollback": 10000,
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
         "markdown": true,
     },
+    "github.copilot.chat.localeOverride": "en",
 }
