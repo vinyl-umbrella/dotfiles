@@ -2,4 +2,10 @@ if [[ $OSTYPE == darwin* ]]; then
   export PATH=$PATH:/opt/homebrew/bin
 fi
 
-export PATH=$PATH:$HOME/.local/bin
+path=(
+  "$HOME/.local/bin"
+  "$path[@]"
+)
+
+
+export WIN_HOME=/mnt/c/Users/j
