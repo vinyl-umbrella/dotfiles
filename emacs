@@ -3,7 +3,6 @@
       '(("gnu" . "https://elpa.gnu.org/packages/")
         ("melpa" . "https://melpa.org/packages/")
         ("org" . "https://orgmode.org/elpa/")
-        ("marmalade" . "https://marmalade-repo.org/packages/")
         ))
 
 (package-initialize)
@@ -11,9 +10,6 @@
 (unless (package-installed-p 'company)
   (package-refresh-contents)
   (package-install 'company))
-(unless (package-installed-p 'company-jedi)
-  (package-refresh-contents)
-  (package-install 'company-jedi))
 (unless (package-installed-p 'smart-mode-line)
   (package-refresh-contents)
   (package-install 'smart-mode-line))
@@ -23,9 +19,6 @@
 (unless (package-installed-p 'rainbow-delimiters)
   (package-refresh-contents)
   (package-install 'rainbow-delimiters))
-(unless (package-installed-p 'flycheck)
-  (package-refresh-contents)
-  (package-install 'flycheck))
 (unless (package-installed-p 'multi-term)
   (package-refresh-contents)
   (package-install 'multi-term))
@@ -34,13 +27,10 @@
 
 
 (require 'company)
-(require 'jedi-core)
 (require 'smart-mode-line)
 (require 'rainbow-delimiters)
-(require 'flycheck)
 (require 'diminish)
 (require 'multi-term)
-;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 
 (set-language-environment 'utf-8)
@@ -71,6 +61,8 @@
 ;; line num
 (global-display-line-numbers-mode 1)
 (setq-default display-line-numbers-width 4)
+(set-face-attribute 'line-number nil
+                    :foreground "gray40")
 
 ;; bar
 (tool-bar-mode 0)
@@ -127,15 +119,6 @@
       company-minimum-prefix-length 2
       company-selection-wrap-around 1)
 
-(setq jedi:complete-on-dot t)
-(setq jedi:use-shortcuts t)
-(add-hook 'python-mode-hook 'jedi:setup)
-(add-to-list 'company-backends 'company-jedi)
-
-;; flycheck
-(global-flycheck-mode)
-
-
 ;; Rainbow-delimiters
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require 'cl-lib)
@@ -174,7 +157,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (multi-term diminish company-jedi flycheck rainbow-delimiters monokai-theme smart-mode-line company))))
+    (multi-term diminish rainbow-delimiters monokai-theme smart-mode-line company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
