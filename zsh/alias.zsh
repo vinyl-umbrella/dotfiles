@@ -27,3 +27,8 @@ function gitzip() {
     echo $dir_name
         git archive -o ${dir_name}\.zip HEAD
 }
+
+function psgrep() {
+    ps aux | head -n 1;
+    ps aux | grep $* | grep -v "ps -auxww" | grep -v grep;
+}
