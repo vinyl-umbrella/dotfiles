@@ -16,6 +16,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
+alias c='code'
 
 # in ubuntu, bat is named batcat
 if type batcat > /dev/null 2>&1; then
