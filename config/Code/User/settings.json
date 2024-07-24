@@ -57,18 +57,30 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.formatOnPaste": true,
+        "editor.tabSize": 4,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+        },
+    },
     "python.languageServer": "Pylance",
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnType": true,
-        "editor.formatOnPaste": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "error",
+        "reportUnusedImport": "error",
+        "reportUnusedVariable": "warning",
+        "reportImportCycles": "error",
     },
-    "black-formatter.args": [
-        "--line-length",
-        "100"
-    ],
+    "black-formatter.args": ["--line-length", "100"],
+    "isort.args": ["--profile", "black"],
+    
     "[vue]": {
         "editor.tabSize": 2
     },
