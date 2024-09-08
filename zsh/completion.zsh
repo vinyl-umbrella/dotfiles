@@ -23,6 +23,8 @@ else
   echo "\e[1;31m[warn]\e[m aws_completer not found in /usr/local/bin/"
 fi
 
+fpath=(~/.zsh/completion $fpath)
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
