@@ -4,6 +4,7 @@ fi
 
 path=(
   "$HOME/.local/bin"
+  "/usr/local/go/bin"
   "$path[@]"
 )
 
