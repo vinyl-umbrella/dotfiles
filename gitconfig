@@ -10,6 +10,7 @@
 
 [core]
     editor = code --wait
+    quotepath = false
 
 [color]
     ui = true
@@ -18,8 +19,9 @@
     defaultBranch = main
 
 [alias]
-    st = status -sb
+    s = status -sb
     cm = commit -m
     br = branch
     co = checkout
+    sw = switch
     log1 = log --oneline
