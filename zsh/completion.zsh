@@ -17,8 +17,9 @@ setopt auto_param_keys
 setopt correct
 
 # kube
-which minikube >/dev/null 2>&1 && source <(minikube completion zsh)
+which minikube >/dev/null 2>&1 && source <(minikube completion zsh) && source <(minikube kubectl completion zsh)
 which kn >/dev/null 2>&1 && source <(kn completion zsh)
+which helm >/dev/null 2>&1 && source <(helm completion zsh)
 
 # awscli
 autoload bashcompinit && bashcompinit
