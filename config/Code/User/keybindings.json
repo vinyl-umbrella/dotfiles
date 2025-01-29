@@ -81,5 +81,17 @@
         "key": "alt+b",
         "command": "cursorWordLeft",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+oem_comma",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+oem_comma",
+        "command": "workbench.action.openApplicationSettingsJson"
+    },
+    {
+        "key": "insert",
+        "command": "-editor.action.toggleOvertypeInsertMode"
     }
 ]
