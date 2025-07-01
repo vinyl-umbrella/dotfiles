@@ -25,3 +25,4 @@
     co = checkout
     sw = switch
     log1 = log --oneline
+    cansel = reset --soft HEAD^

@@ -1,52 +1,58 @@
 {
-    "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "editor.wordWrap": "on",
-    "editor.foldingHighlight": false,
-    "editor.roundedSelection": false,
-    "editor.tabCompletion": "onlySnippets",
-    "editor.fontFamily": "HackGen, Consolas, 'Courier New', monospace",
+    "files.trimTrailingWhitespace": true,
     "editor.bracketPairColorization.enabled": true,
-    "editor.formatOnSave": true,
-    "editor.cursorBlinking": "phase",
-    "editor.cursorWidth": 4,
-    "editor.minimap.enabled": false,
-    "editor.inlineSuggest.enabled": true,
     "editor.copyWithSyntaxHighlighting": false,
-    "editor.largeFileOptimizations": false,
-    "editor.renderLineHighlight": "gutter",
-    "editor.renderWhitespace": "boundary",
+    "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "explicit",
+    "editor.cursorWidth": 4,
+    "editor.foldingHighlight": false,
+    "editor.fontFamily": "HackGen, Consolas, 'Courier New', monospace",
     "editor.fontSize": 17,
-    "editor.stickyScroll.enabled": true,
+    "editor.formatOnSave": true,
     "editor.guides.bracketPairs": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
+    "editor.inlineSuggest.enabled": true,
+    "editor.largeFileOptimizations": false,
+    "editor.minimap.enabled": false,
     "editor.quickSuggestions": {
         "other": "on",
         "comments": "off",
         "strings": "on"
     },
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderWhitespace": "boundary",
+    "editor.roundedSelection": false,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.stickyScroll.enabled": true,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordWrap": "on",
     "explorer.confirmDragAndDrop": false,
     "explorer.compactFolders": false,
     "explorer.incrementalNaming": "smart",
     "diffEditor.ignoreTrimWhitespace": false,
-    "extensions.ignoreRecommendations": false,
-    "material-icon-theme.saturation": 0.2,
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.scrollback": 10000,
+    "git.blame.statusBarItem.enabled": true,
+    "git.autofetch": true,
+    "github.gitProtocol": "ssh",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+    },
+    "github.copilot.chat.localeOverride": "en",
     "window.density.editorTabHeight": "compact",
     "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
-    "workbench.tree.indent": 16,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.layoutControl.enabled": false,
-    "workbench.colorTheme": "GitHub Dark Dimmed",
     "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.saturation": 0.3,
+    "workbench.layoutControl.enabled": false,
+    "workbench.panel.showLabels": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.indent": 16,
     "workbench.colorCustomizations": {
         "statusBarItem.remoteBackground": "#386b80",
         "statusBarItem.remoteForeground": "#ddd",
@@ -54,13 +60,11 @@
         "activityBarBadge.foreground": "#3e778d",
         "activityBarBadge.background": "#ddd",
     },
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.scrollback": 10000,
+    "security.workspace.trust.untrustedFiles": "open",
+    "extensions.ignoreRecommendations": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
@@ -89,12 +93,18 @@
         "--profile",
         "black"
     ],
+    "python.analysis.aiCodeActions": {
+        "implementAbstractClasses": true,
+        "convertFormatString": true,
+        "generateDocstring": true
+    },
     "[vue]": {
         "editor.tabSize": 2
     },
     "[typescriptreact]": {
         "editor.tabSize": 2
     },
+    "typescript.locale": "en",
     "[javascriptreact]": {
         "breadcrumbs.showArrays": true,
         "editor.tabSize": 2
@@ -103,13 +113,6 @@
         "editor.formatOnPaste": true
     },
     "go.useLanguageServer": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": true,
-        "markdown": true,
-    },
-    "github.copilot.chat.localeOverride": "en",
     "aws.resources.enabledResources": [
         "AWS::IAM::Role"
     ],

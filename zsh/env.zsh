@@ -1,4 +1,5 @@
 export AWS_PROFILE=default
+export AWS_SDK_LOAD_CONFIG=1
 export EDITOR=emacs
 export GOPATH=$HOME/go
 

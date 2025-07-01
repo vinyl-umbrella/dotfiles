@@ -2,7 +2,6 @@
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -C
 
-
 # style
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
