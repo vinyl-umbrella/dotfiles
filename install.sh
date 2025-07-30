@@ -8,8 +8,8 @@ ln -sf $DOTFILES_DIR/zshrc ~/.zshrc
 ln -sf $DOTFILES_DIR/zlogout ~/.zlogout
 ln -sf $DOTFILES_DIR/zsh/ ~/.zsh
 
-# emcas
-ln -sf $DOTFILES_DIR/emacs ~/.emacs
+# emacs
+ln -sf $DOTFILES_DIR/emacs.d/init.el ~/.emacs.d/init.el
 
 # config
 ln -sf $DOTFILES_DIR/config/bat ~/.config/bat

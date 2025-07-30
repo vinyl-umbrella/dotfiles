@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 autoload -Uz colors
-eval "$(ssh-agent -s)" > /dev/null 2>&1
+# eval "$(ssh-agent -s)" > /dev/null 2>&1
 
 # load from splitted zsh config files
 ZSHHOME="${HOME}/.zsh"
