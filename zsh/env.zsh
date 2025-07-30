@@ -10,6 +10,7 @@ fi
 path=(
   "$HOME/.local/bin"
   "$HOME/.cargo/bin"
+  "$GOPATH/bin"
   "/usr/local/go/bin"
   "$path[@]"
 )
