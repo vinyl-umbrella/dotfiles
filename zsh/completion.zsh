@@ -36,3 +36,6 @@ if test -e /usr/local/bin/aws_completer; then
 else
   echo "\e[1;31m[warn]\e[m aws_completer not found in /usr/local/bin/"
 fi
+
+# terraform
+which terraform > /dev/null 2>&1 && complete -o nospace -C /usr/bin/terraform terraform
