@@ -16,9 +16,18 @@ setopt auto_param_keys
 setopt correct
 
 # kube
-which minikube >/dev/null 2>&1 && source <(minikube completion zsh) && source <(minikube kubectl completion zsh)
-which kn >/dev/null 2>&1 && source <(kn completion zsh)
-which helm >/dev/null 2>&1 && source <(helm completion zsh)
+which minikube > /dev/null 2>&1 && source <(minikube completion zsh) && source <(minikube kubectl completion zsh)
+which kn > /dev/null 2>&1 && source <(kn completion zsh)
+which helm > /dev/null 2>&1 && source <(helm completion zsh)
+
+# docker
+which docker > /dev/null 2>&1 && source <(docker completion zsh)
+
+# npm
+which npm > /dev/null 2>&1 && source <(npm completion)
+
+# uv
+which uv > /dev/null 2>&1 && source <(uv generate-shell-completion zsh)
 
 # awscli
 autoload bashcompinit && bashcompinit
@@ -26,9 +35,4 @@ if test -e /usr/local/bin/aws_completer; then
   complete -C '/usr/local/bin/aws_completer' aws
 else
   echo "\e[1;31m[warn]\e[m aws_completer not found in /usr/local/bin/"
-fi
-
-# npm
-if which npm >/dev/null 2>&1; then
-  source <(npm completion)
 fi
