@@ -2,6 +2,3 @@
 
 # theme
 --theme="Monokai Extended"
-
-# disable pager
---paging="never"

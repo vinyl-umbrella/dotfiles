@@ -3,6 +3,7 @@ export AWS_REGION=ap-northeast-1
 export AWS_SDK_LOAD_CONFIG=1
 export EDITOR=emacs
 export GOPATH=$HOME/go
+export LESS='-FMR -z-4'
 
 if [[ $OSTYPE == darwin* ]]; then
   export PATH=$PATH:/opt/homebrew/bin
