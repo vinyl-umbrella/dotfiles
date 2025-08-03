@@ -13,10 +13,13 @@
     quotepath = false
 
 [color]
-    ui = true
+    ui = auto
 
 [init]
     defaultBranch = main
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
 
 [alias]
     s = status -sb
@@ -24,5 +27,18 @@
     br = branch
     co = checkout
     sw = switch
-    log1 = log --oneline
+    ls = log --decorate --oneline --stat
+    log1 = log --abbrev-commit --color --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %C(blue)(%cr)%Creset <%an>'
     cansel = reset --soft HEAD^
+
+[checkout]
+    defaultRemote = origin
+
+[fetch]
+    prune = true
+
+[log]
+    date = iso
+
+[diff]
+    w
