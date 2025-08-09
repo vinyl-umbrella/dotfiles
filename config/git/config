@@ -9,8 +9,9 @@
     email = 61788251+vinyl-umbrella@users.noreply.github.com
 
 [core]
-    editor = code --wait
+    editor = code-insiders --wait
     quotepath = false
+    pager = less -FMRX -z-4
 
 [color]
     ui = auto
@@ -41,4 +42,4 @@
     date = iso
 
 [diff]
-    w
+    ignoreSpaceAtEol = true
