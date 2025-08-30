@@ -20,6 +20,9 @@ which minikube > /dev/null 2>&1 && source <(minikube completion zsh) && source <
 which kn > /dev/null 2>&1 && source <(kn completion zsh)
 which helm > /dev/null 2>&1 && source <(helm completion zsh)
 
+# gh
+which gh > /dev/null 2>&1 && source <(gh completion -s zsh)
+
 # docker
 which docker > /dev/null 2>&1 && source <(docker completion zsh)
 
