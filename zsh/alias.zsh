@@ -37,6 +37,44 @@ function psgrep() {
 }
 
 
+function ecrp() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: ecrp <aws-profile> <ecr-url>"
+    return 1
+  fi
+
+  local profile="$1"
+  local ecr_url="$2"
+  local region="${AWS_REGION:-ap-northeast-1}"
+
+  aws ecr get-login-password --region "$region" --profile "$profile" | docker login --username AWS --password-stdin "$ecr_url"
+
+  docker pull "$ecr_url"
+}
+
+function imgx() {
+  if [ "$#" -ne 1 ]; then
+    echo "Usage: imgx <image>"
+    return 1
+  fi
+
+  local image="$1"
+  local container_id=$(docker create "$image" 2>/dev/null)
+
+  # sanitize
+  local safe_image
+  safe_image=$(printf '%s' "$image" | sed 's#[/:]#_#g')
+
+  output_dir="${safe_image}_$(date +%Y%m%d%H%M%S)"
+  mkdir -p "$output_dir"
+
+  # Stream export directly into tar extraction
+  docker export "$container_id" | tar -x -C "$output_dir"
+
+  # Successful cleanup (trap will still attempt but it's fine)
+  docker rm "$container_id" >/dev/null 2>&1
+}
+
 function base91() {
   local alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#\$%&()*+,./:;<=>?@[]^_\`{|}~\""
   local input="$1"
