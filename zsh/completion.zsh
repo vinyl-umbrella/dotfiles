@@ -11,7 +11,11 @@ if [[ $OSTYPE == Linux* ]]; then
   zstyle ':completion:*' special-dirs true
   zstyle ':completion:*' list-colors `dircolors`
 fi
+zstyle ':completion:*' list-dirs-first true
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
 
+setopt LIST_TYPES
 setopt auto_param_keys
 setopt correct
 
