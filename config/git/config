@@ -49,6 +49,7 @@
 
 [fetch]
     prune = true
+    writeCommitGraph = true
 
 [log]
     date = iso
@@ -56,3 +57,5 @@
 [diff]
     external = difft
     ignoreSpaceAtEol = true
+    colorMoved = default
+    algorithm = histogram
