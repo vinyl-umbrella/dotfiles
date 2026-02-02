@@ -30,7 +30,19 @@
     sw = switch
     ls = log --decorate --oneline --stat
     log1 = log --abbrev-commit --color --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %C(blue)(%cr)%Creset <%an>'
-    cansel = reset --soft HEAD^
+    dshow = -c diff.external=difft show --ext-diff
+    prune-local-br = "!f(){ \
+        set -e; \
+        git fetch --prune; \
+        curr=$(git branch --show-current); \
+        git for-each-ref --format='%(refname:short) %(upstream:short) %(upstream:trackshort)' refs/heads \
+        | awk '$2==\"\" || $3==\"gone\" {print $1}' \
+        | grep -v -x \"$curr\" \
+        | grep -v -E '^(main|master|develop)$' \
+        | sort -u \
+        | xargs -r -n1 git branch -d; \
+    }; f"
+    cancel = reset --soft HEAD^
 
 [checkout]
     defaultRemote = origin
@@ -42,4 +54,5 @@
     date = iso
 
 [diff]
+    external = difft
     ignoreSpaceAtEol = true
